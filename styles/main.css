@@ -87,21 +87,21 @@ ul {
   flex-wrap: wrap;
 }
 
-span.inline {
+.inline {
   display: inline; /* the default for span */
   width: 100px;
   height: 160px;
   padding: 18px;
 }
 
-span.inlineblock {
+.inlineblock {
   display: inline-block;
   width: 100px;
   height: 160px;
   padding: 18px;
 }
 
-span.block {
+.block {
   display: block;
   width: 100px;
   height: 160px;
