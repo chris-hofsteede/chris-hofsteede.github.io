@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../styles/main.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <title>Problem Solving</title>
+  </head>
+  <body>
+    <h2>Tell me about when you were blocked on a simple problem:</h2>
+    <p>
+      One challenging problem I faced was adding a function expression to an
+      object. <strong>Firstly,</strong> I didnt understand the idea of adding a
+      function as a property, and <strong>secondly</strong> I was perplexed by
+      the way that my solution worked.
+    </p>
+    <p>
+      You can see in the image how athleteArray has 2 elements, with <div id="green">'Santa'</div> and
+      '<div id="red">Chris</div>, however when I run the win() function, the output says <div id="red">'Chris won
+      the High Jump event'</div> twice:
+      </p>  
+    <img src="../img/problem-solving1.png"></a>
+    <p>My though progression was:</p>
+    <ul>
+      <li>
+        At least the output is running twice, so that means both function calls
+        are working.
+      </li>
+      <li>
+        It seems like the values 'Chris' and 'High Jump' are persisting, even
+        though I called the function with 'Santa' and 'delivery'.
+      </li>
+      <li>
+        I tried to extract the variables into new variables to inject into the
+        sting. This also didn't work.
+      </li>
+      <li>
+        After a lot of trial and error, and reading a few articles, I went to
+        ChatGPT:
+      </li>
+    </ul>
+    <img src="../img/problem-solving2.png"></a>
+    <p>
+      The explaination from ChatGPT makes sense. Essentially, when the for loop
+      runs, it keeps the final values of athleteArray[i].name and fsport =
+      athleteArray[i].sport, which means that they are used then the win()
+      function is used on both 'Santa' and 'Chris'.
+    </p>
+
+    <p>
+      Essentially, the solution calls an outer function, that returns an inner
+      function. The outer function has the values of 'Santa/delivery' and
+      'Chris/High Jump', so that when the inner function is run, it is using
+      those values at the time, rather than the final values of name and sport
+      from once the for loop is finished running.
+    </p>
+
+    <p>
+      I had not come across this topic before, which is called 'closure', which
+      is to use the variable values at each pass of the for loop, rather than
+      waiting for the final values from the loop. This was an interesting and
+      good learning for me.
+    </p>
+
+    <h2>Explain when I elegantly solved a problem:</h2>
+
+    <p>
+      The challenge to return an array of strings and to join then with no spaces 
+      was very short and simple. I enjoyed being able to solve it in one line using 
+      the join() function:
+    </p>
+
+    <img src="../img/problem-solving3.png">
+
+    <h2>
+      Reflect on how confident you feel using each of these problem-solving
+      techniques/processes:
+    </h2>
+
+    <h3>Pseudocode</h3>
+
+    <p>
+      I would say that I dont often use this technique except for reaaally difficult problems. 
+      I would probably use it last in the case that I got really stuck. I can however understand 
+      the benefits of breaking down a problem into steps and writing those steps down, as that 
+      process seems to help the problem solving by itself. 
+    </p>
+
+    <h3>Trying something</h3>
+
+    <p>
+      This is probably my go-to approach, where I try something quickly to see if it will work. 
+      Quite often it does not. lol. I guess on the other hand as I develop my skills, it could 
+      be useful to just type in what I think, and I imagine with more experience, the solution 
+      will gradually become more likely correct. 
+    </p>
+
+    <h3>Rubber ducky method</h3>
+
+    <p>
+      I like this method. Similar to Pseudocode, it helps to talk through a problem step by step. 
+      I would say that I do not use this tool often, excet for the case when a problem is very very 
+      difficult with a lot of difficult steps. 
+    </p>
+
+    <h3>Reading error messages</h3>
+
+    <p>
+      Error messages are useful. I read them often. I would say they are more useful for finding 
+      punctuation mistakes, or missing brackets and colons. Error messages are not as useful for 
+      solving complex problems, as the interpreter does not understand what it is that I am trying 
+      to achieve, but mainly whether it is gramatically correct, and able to be run by the browser.  
+    </p>
+
+    <h3>Console.logging</h3>
+
+    <p>
+      I use console.log() often to see what is the value of an object or item at a given step. 
+    </p>
+    
+    <h3>Googling</h3> 
+
+    <p>
+      I use googling often to search for solutions and explainations to technial questions. 
+    </p>
+    
+    <h3>Asking your peers for help</h3>
+
+    <p>
+      To be honest, I am a bit of a lone ranger, so I would prefer to solve something myself, 
+      than to ask anyone else. I will keep this in mind for future reference. 
+    </p>
+    
+    <h3>Asking coaches for help</h3>
+    
+    <p>
+      Same as above. I was considering asking a coach about the issue (top of page) until I found 
+      the solution and explaination on ChatGPT. 
+    </p>
+
+    <h3>Improving your process with reflection</h3>
+
+    <p>
+      Reflecting has definitley helped in sharpening my decision making process, and understanding 
+      how I learn, and solve problems. Writing reflections is time consuming, however it is worth the 
+      time to cement the knowledge. 
+    </p>
+    
+    <h2>
+      Reflect on a time you were reluctant to ask for help. Consider what made
+      you reluctant to do so. What might you try differently next time?
+    </h2>
+
+    <p>
+      I would say that I am generally quite self sufficient (in life and coding) I guess I was brought 
+      up to figure things out for myself (could be due to being from a big family). I think I have an 
+      in-built desire not to 'bother' anyone.
+    </p>
+      
+    <p>
+      It is important for me to learn that other people are there to help, and that I can and should
+      make use of those resouces to aid in my learning. 
+    </p>
+
+    <h3></h3>
+  </body>
+</html>
